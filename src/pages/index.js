@@ -1,5 +1,5 @@
 import React from "react"
 
 export default function Home() {
-  return <div>This is a SaaSEO website</div>
+  return <div>This is a SaaSEO website<span> lucky!</span></div>
 }
