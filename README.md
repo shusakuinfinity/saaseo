@@ -11,3 +11,4 @@ plugins
 *'gatsby-plugin-robots-txt',
 *'gatsby-plugin-next-seo'
 *`gatsby-plugin-breadcrumb`
+*tailwind CSS
