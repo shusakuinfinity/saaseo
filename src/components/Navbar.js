@@ -1,9 +1,56 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'gatsby'
+import { StaticImage } from 'gatsby-plugin-image'
+import WhiteLogo from "../assets/images/Logo_SaaSEO.svg"
 
 const Navbar = () => {
+    const [show, setShow] = useState(false)
     return (
         <div>
-            
+            <section className="bg-blueGray-800"><div className="container px-4 mx-auto">
+                <nav className="flex justify-between items-center py-6">
+                    <Link className="" to="/">
+                        <WhiteLogo className="h-10" />
+                    </Link>
+                    <div className="lg:hidden">
+                        <button className="navbar-burger flex items-center py-2 px-3 rounded border text-white border-white hover:border-yellow-200" onClick={() => { setShow(!show) }}>
+                            <svg className="fill-current h-4 w-4" viewbox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Mobile menu</title><path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path></svg></button>
+                    </div>
+                    <ul className="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
+                        <li><Link className="text-sm duration-200 transition text-white hover:text-yellow-200" to="/">初めての方へ</Link></li>
+                        <li><Link className="text-sm duration-200 transition text-white hover:text-yellow-200" to="/">SEO対策</Link></li>
+                        <li><Link className="text-sm duration-200 transition text-white hover:text-yellow-200" to="/">スマホ対応</Link></li>
+                        <li><Link className="text-sm duration-200 transition text-white hover:text-yellow-200" to="/">SaaS導入</Link></li>
+                        <li><Link className="text-sm duration-200 transition text-white hover:text-yellow-200" to="/">爆速サイト</Link></li>
+                    </ul><div className="hidden lg:block"><Link className="mr-2 inline-block px-4 py-3 text-xs font-semibold leading-none rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl bg-yellow-200 hover:bg-yellow-300 text-blueGray-500 hover:text-blueGray-600" to="/">見積り依頼</Link><Link className="inline-block px-4 py-3 text-xs font-semibold leading-none rounded text-blueGray-500 hover:text-blueGray-600 text-center font-semibold leading-none bg-white border border-blueGray-200 hover:border-blueGray-300 rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl" to="/">お問い合わせ</Link></div>
+                </nav>
+                <div className={show ? "navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50" : "hidden"}>
+                    <div className="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25" onClick={() => { setShow(!show) }}></div>
+                    <nav className="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto"><div className="flex items-center mb-8">
+                        <Link className="" to="/">
+                            <StaticImage src="../assets/images/logo_SaaSEO_black.svg" alt="岡崎市のWeb制作会社SaaSEO 黒ロゴ" />
+                        </Link>
+                        <button className="navbar-close">
+                            <svg className="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blueGray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewbox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+                    </div>
+                        <div>
+                            <ul><li className="mb-1"><Link className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" to="/">初めての方へ</Link></li>
+                                <li className="mb-1"><Link className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" to="/">SEO対策</Link></li>
+                                <li className="mb-1"><Link className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" to="/">スマホ対応</Link></li>
+                                <li className="mb-1"><Link className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" to="/">SaaS導入</Link></li>
+                                <li className="mb-1"><Link className="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-600" to="/">爆速サイト</Link></li>
+                            </ul><div className="mt-4 pt-6 border-t border-blueGray-100"><Link className="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-blue-600 hover:bg-blue-700 text-white rounded" to="/">お問い合わせ</Link><Link className="block px-4 py-3 mb-2 text-xs text-center text-blue-600 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" to="/">見積り依頼</Link></div>
+                        </div>
+                        <div className="mt-auto">
+                            <p className="my-4 text-xs text-blueGray-400">
+                                <span>Email: </span>
+                                <Link className="text-blue-600 hover:text-blue-600 underline" to="/">contact@saaseo.com</Link>
+                            </p>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            </section>
         </div>
     )
 }
