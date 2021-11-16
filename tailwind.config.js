@@ -1,5 +1,5 @@
 module.exports = {
-    mode:'jit',
+    mode: 'jit',
     purge: [
         "./src/**/*.{js,jsx,ts,tsx}",
     ],
@@ -14,10 +14,10 @@ module.exports = {
         colors: {
             current: 'currentColor',
             transparent: 'transparent',
-        
+
             black: '#000',
             white: '#fff',
-        
+
             blueGray: {
                 50: '#f8fafc',
                 100: '#f1f5f9',
