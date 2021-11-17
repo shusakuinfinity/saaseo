@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { navigate } from "gatsby-link";
 import Layout from "../components/Layout";
+import { IoReloadSharp } from 'react-icons/io5'
 
 const encode = (data) => {
     return Object.keys(data)
@@ -30,48 +31,60 @@ const Form = () => {
             .catch((error) => alert(error));
     };
 
+    const [show, setShow] = useState(false)
+
     return (
         <Layout>
-            <form
-                name="quotation"
-                method="post"
-                action="/success"
-                data-netlify="true"
-                data-netlify-honeypot="bot-field"
-                onSubmit={handleSubmit}
-            >
-                <input type="hidden" name="form-name" value="quotation" />
-                <p hidden>
-                    <label>
-                        {" "}
-                        <input name="bot-field" onChange={handleChange} />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Your name:
-                        <br />
-                        <input type="text" name="name" onChange={handleChange} />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Your email:
-                        <br />
-                        <input type="email" name="email" onChange={handleChange} />
-                    </label>
-                </p>
-                <p>
-                    <label>
-                        Message:
-                        <br />
-                        <textarea name="message" onChange={handleChange} />
-                    </label>
-                </p>
-                <p>
-                    <button type="submit">Send</button>
-                </p>
-            </form>
+            <section className="py-20">
+                <div className="container px-4 mx-auto">
+                    <div className="max-w-2xl mx-auto">
+                        <div className="max-w-md mb-8 mx-auto text-center">
+                            <h2 className="mt-2 text-4xl font-bold font-heading">見積り依頼</h2>
+                            <span className="text-sm text-blueGray-400">1～3営業日以内に、担当よりメールにて返信させていただきます</span>
+                        </div>
+                        <form
+                            name="quotation"
+                            method="post"
+                            action="/success"
+                            data-netlify="true"
+                            data-netlify-honeypot="bot-field"
+                            onSubmit={handleSubmit}
+                        >
+                            <input type="hidden" name="form-name" value="quotation" />
+                            <p hidden>
+                                <label>
+                                    {" "}
+                                    <input name="bot-field" onChange={handleChange} />
+                                </label>
+                            </p>
+                            <p className="mb-6">
+                                <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                    お名前
+                                    <br />
+                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none" placeholder="例）田中 太郎" type="text" name="name" onChange={handleChange} />
+                                </label>
+                            </p>
+                            <p className="mb-6">
+                                <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                    メールアドレス
+                                    <br />
+                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none" placeholder="例）suzuki@saaseo.com" type="email" name="email" onChange={handleChange} />
+                                </label>
+                            </p>
+                            <p className="mb-6">
+                                <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                    詳細内容
+                                    <br />
+                                    <textarea className="w-full h-48 p-4 leading-none bg-blueGray-50 rounded outline-none resize-y" placeholder="経緯、目的、事業内容、希望日程、気になることなど" name="message" onChange={handleChange} />
+                                </label>
+                            </p>
+                            <p className="text-center">
+                                <button onClick={() => { setShow(!show) }} className={show ? "hidden transition duration-100" : "py-4 px-8 text-sm text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded transition duration-200"} type="submit">送信する</button>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </section>
         </Layout>
     );
 };

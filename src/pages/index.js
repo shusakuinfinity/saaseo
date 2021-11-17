@@ -156,12 +156,10 @@ export default function Home() {
             <span className="text-yellow-200">大丈夫。</span>
             <span>無料相談で状況整理をお手伝いします。</span>
           </h2>
-          <p className="mb-8 text-blueGray-200">以下にメールアドレスを入力して頂ければ、相談可能な日程をお送り致します。</p>
-          <div className="flex flex-wrap max-w-lg mx-auto">
-            <div className="flex w-full md:w-2/3 px-3 mb-3 md:mb-0 md:mr-6 rounded bg-white">
-              <svg className="h-6 w-6 my-auto text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"><path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path><path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path></svg>
-              <input className="w-full pl-3 py-4 text-xs font-semibold leading-none outline-none bg-white placeholder-gray-400" type="text" placeholder="Type your e-mail" /></div>
-            <button className="w-full md:w-auto py-4 px-8 text-xs font-semibold leading-none rounded transition duration-300 ease-in-out hover:bg-yellow-200 hover:text-blueGray-600 text-white bg-blueGray-600" type="submit">送信する</button>
+          <p className="text-blueGray-200">ご連絡を頂ければ、相談可能な日程をお送り致します。</p>
+          <div className="py-8">
+            <Link className="block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-center font-semibold leading-none rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl bg-yellow-200 hover:bg-yellow-300 text-blueGray-500 hover:text-blueGray-600" to="/contact">お問い合わせする</Link>
+            <Link className="block sm:inline-block py-4 px-8 text-xs text-blueGray-500 hover:text-blueGray-600 text-center font-semibold leading-none bg-white border border-blueGray-200 hover:border-blueGray-300 rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl" to="/quotation">見積り依頼をする</Link>
           </div>
         </div>
       </div>
