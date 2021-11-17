@@ -108,37 +108,37 @@ const Form = () => {
                                 </p>
                                 <p className="mb-2">
                                     <label className="text-blueGray-600 mb-1 ml-1 text-sm">
-                                        <input type="checkbox" name="subject" value="existing" onChange={handleChange} />
+                                        <input type="checkbox" name="subject1" value="existing" onChange={handleChange} />
                                         <span className="ml-1">既存サイト改善</span>
                                     </label>
                                 </p>
                                 <p className="mb-2">
                                     <label className="text-blueGray-600 mb-1 ml-1 text-sm">
-                                        <input type="checkbox" name="subject" value="seo" onChange={handleChange} />
+                                        <input type="checkbox" name="subject2" value="seo" onChange={handleChange} />
                                         <span className="ml-1">SEO対策</span>
                                     </label>
                                 </p>
                                 <p className="mb-2">
                                     <label className="text-blueGray-600 mb-1 ml-1 text-sm">
-                                        <input type="checkbox" name="subject" value="responsive" onChange={handleChange} />
+                                        <input type="checkbox" name="subject3" value="responsive" onChange={handleChange} />
                                         <span className="ml-1">スマホ対応・レスポンシブ化</span>
                                     </label>
                                 </p>
                                 <p className="mb-2">
                                     <label className="text-blueGray-600 mb-1 ml-1 text-sm">
-                                        <input type="checkbox" name="subject" value="speed" onChange={handleChange} />
+                                        <input type="checkbox" name="subject4" value="speed" onChange={handleChange} />
                                         <span className="ml-1">サイト・ページスピードの速いサイト制作</span>
                                     </label>
                                 </p>
                                 <p className="mb-2">
                                     <label className="text-blueGray-600 mb-1 ml-1 text-sm">
-                                        <input type="checkbox" name="subject" value="ads" onChange={handleChange} />
+                                        <input type="checkbox" name="subject5" value="ads" onChange={handleChange} />
                                         <span className="ml-1">広告運用</span>
                                     </label>
                                 </p>
                                 <p className="mb-2">
                                     <label className="text-blueGray-600 mb-1 ml-1 text-sm">
-                                        <input type="checkbox" name="subject" value="others" onChange={handleChange} />
+                                        <input type="checkbox" name="subject6" value="others" onChange={handleChange} />
                                         <span className="ml-1">その他（詳細欄にご記入ください）</span>
                                     </label>
                                 </p>
