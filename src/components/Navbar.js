@@ -48,7 +48,7 @@ const Navbar = () => {
                         <div className="mt-auto">
                             <p className="my-4 text-xs text-blueGray-400">
                                 <span>Email: </span>
-                                <Link className="text-blue-600 hover:text-blue-600 underline" to="/">contact@saaseo.com</Link>
+                                <a className="text-blue-600 hover:text-blue-600 underline" href="mailto:contact@saaseo.com">contact@saaseo.com</a>
                             </p>
                         </div>
                     </nav>

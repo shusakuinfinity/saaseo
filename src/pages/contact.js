@@ -12,7 +12,7 @@ const contact = () => {
                             <span className="text-sm text-blueGray-400">1～3営業日以内に、担当よりメールにて返信させていただきます</span>
                         </div>
                         <div>
-                            <form name="contact" method="POST" data-netlify="true">
+                            <form name="contact" method="POST" data-netlify="true" action="/success">
                                 <div className="mb-6">
                                     <label htmlFor="name" className="text-blueGray-600 mb-1 ml-1 text-sm">担当者名</label>
                                     <input
