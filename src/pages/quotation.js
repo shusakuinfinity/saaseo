@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { navigate } from "gatsby-link";
 import Layout from "../components/Layout";
-import { IoReloadSharp } from 'react-icons/io5'
 
 const encode = (data) => {
     return Object.keys(data)
@@ -61,21 +60,94 @@ const Form = () => {
                                 <label className="text-blueGray-600 mb-1 ml-1 text-sm">
                                     お名前
                                     <br />
-                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none" placeholder="例）田中 太郎" type="text" name="name" onChange={handleChange} />
+                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）田中 太郎" type="text" name="name" onChange={handleChange} />
+                                </label>
+                            </p>
+                            <p className="mb-6">
+                                <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                    会社名/店舗名
+                                    <br />
+                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）SaaSEO合同会社" type="text" name="company" onChange={handleChange} />
                                 </label>
                             </p>
                             <p className="mb-6">
                                 <label className="text-blueGray-600 mb-1 ml-1 text-sm">
                                     メールアドレス
                                     <br />
-                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none" placeholder="例）suzuki@saaseo.com" type="email" name="email" onChange={handleChange} />
+                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）name@saaseo.com" type="email" name="email" onChange={handleChange} />
                                 </label>
                             </p>
                             <p className="mb-6">
                                 <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                    電話番号（任意）
+                                    <br />
+                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）0564−123-4567" type="tel" name="phone" onChange={handleChange} />
+                                </label>
+                            </p>
+                            <p className="mb-6">
+                                <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                    現状のウェブサイトURL（無ければ空欄のままで構いません）
+                                    <br />
+                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）saaseo.com, https://saaseo.io" type="text" name="url" onChange={handleChange} />
+                                </label>
+                            </p>
+                            <p className="mb-6">
+                                <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                    ご予算上限（決まっていれば）
+                                    <br />
+                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）100万円" type="text" name="budget" onChange={handleChange} />
+                                </label>
+                            </p>
+                            <fieldset className="mb-6">
+                                <legend className="text-blueGray-600 mb-1 ml-1 text-sm font-bold">依頼する可能性のある内容をご選択ください</legend>
+                                <p className="mb-2">
+                                    <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                        <input type="checkbox" name="subject" value="new" onChange={handleChange} />
+                                        <span className="ml-1">新規ウェブサイト制作</span>
+                                    </label>
+                                </p>
+                                <p className="mb-2">
+                                    <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                        <input type="checkbox" name="subject" value="existing" onChange={handleChange} />
+                                        <span className="ml-1">既存サイト改善</span>
+                                    </label>
+                                </p>
+                                <p className="mb-2">
+                                    <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                        <input type="checkbox" name="subject" value="seo" onChange={handleChange} />
+                                        <span className="ml-1">SEO対策</span>
+                                    </label>
+                                </p>
+                                <p className="mb-2">
+                                    <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                        <input type="checkbox" name="subject" value="responsive" onChange={handleChange} />
+                                        <span className="ml-1">スマホ対応・レスポンシブ化</span>
+                                    </label>
+                                </p>
+                                <p className="mb-2">
+                                    <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                        <input type="checkbox" name="subject" value="speed" onChange={handleChange} />
+                                        <span className="ml-1">サイト・ページスピードの速いサイト制作</span>
+                                    </label>
+                                </p>
+                                <p className="mb-2">
+                                    <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                        <input type="checkbox" name="subject" value="ads" onChange={handleChange} />
+                                        <span className="ml-1">広告運用</span>
+                                    </label>
+                                </p>
+                                <p className="mb-2">
+                                    <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                        <input type="checkbox" name="subject" value="others" onChange={handleChange} />
+                                        <span className="ml-1">その他（詳細欄にご記入ください）</span>
+                                    </label>
+                                </p>
+                            </fieldset>
+                            <p className="mb-6">
+                                <label className="text-blueGray-600 mb-1 ml-1 text-sm">
                                     詳細内容
                                     <br />
-                                    <textarea className="w-full h-48 p-4 leading-none bg-blueGray-50 rounded outline-none resize-y" placeholder="経緯、目的、事業内容、希望日程、気になることなど" name="message" onChange={handleChange} />
+                                    <textarea className="w-full h-48 p-4 leading-none bg-blueGray-50 rounded outline-none resize-y placeholder-blueGray-300" placeholder="経緯、目的、事業内容、希望日程、気になることなど" name="message" onChange={handleChange} />
                                 </label>
                             </p>
                             <p className="text-center">

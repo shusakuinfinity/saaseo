@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import Layout from '../components/Layout'
-import { navigate } from 'gatsby-link'
+import React, { useState } from "react";
+import { navigate } from "gatsby-link";
+import Layout from "../components/Layout";
 
 const encode = (data) => {
     return Object.keys(data)
@@ -9,7 +9,6 @@ const encode = (data) => {
 };
 
 const Contact = () => {
-
     const [state, setState] = useState({});
 
     const handleChange = (e) => {
@@ -31,67 +30,76 @@ const Contact = () => {
             .catch((error) => alert(error));
     };
 
+    const [show, setShow] = useState(false)
+
     return (
         <Layout>
             <section className="py-20">
                 <div className="container px-4 mx-auto">
                     <div className="max-w-2xl mx-auto">
                         <div className="max-w-md mb-8 mx-auto text-center">
-                            <h2 className="mt-2 text-4xl font-bold font-heading">お問い合わせ</h2>
+                            <h2 className="mt-2 text-4xl font-bold font-heading">お問い合わせ・無料相談</h2>
                             <span className="text-sm text-blueGray-400">1～3営業日以内に、担当よりメールにて返信させていただきます</span>
                         </div>
-                        <div>
-                            <form
-                                name="contact"
-                                method="POST"
-                                data-netlify="true"
-                                action="/success"
-                                data-netlify-honeypot="bot-field"
-                                onSubmit={handleSubmit}
-                            >
-                                <input type="hidden" name="form-name" value="contact" />
-                                <p hidden>
-                                    <label>
-                                        {" "}
-                                        <input name="bot-field" onChange={handleChange} />
-                                    </label>
-                                </p>
-                                <div className="mb-6">
-                                    <label htmlFor="name" className="text-blueGray-600 mb-1 ml-1 text-sm">担当者名</label>
-                                    <input
-                                        id="name"
-                                        type="text"
-                                        placeholder="例：山田 太郎"
-                                        onChange={handleChange}
-                                        className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none"
-                                    />
-                                </div>
-                                <div className="mb-6">
-                                    <label htmlFor="subject" className="text-blueGray-600 mb-1 ml-1 text-sm">問い合わせ内容</label>
-                                    <select onChange={handleChange} id="subject" className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none">
-                                        <option value="newWebsite">新しいウェブサイト制作</option>
-                                        <option value="existingWebsite">既存サイトの改善</option>
-                                        <option value="existingWebsite">広告運用</option>
-                                        <option value="existingWebsite">SEOコンサルティング</option>
-                                        <option value="existingWebsite">SaaS導入</option>
-                                        <option value="discuss">相談して決めたい</option>
-                                        <option value="others">その他</option>
-                                    </select>
-                                </div>
-                                <div className="mb-6">
-                                    <label htmlFor="content" className="text-blueGray-600 mb-1 ml-1 text-sm">問い合わせ詳細</label>
-                                    <textarea onChange={handleChange} id="content" className="w-full h-48 p-4 leading-none bg-blueGray-50 rounded outline-none resize-y" type="text" placeholder="お問い合わせ内容詳細" style={{ marginTop: '0px', marginBottom: '0px', height: '360px' }} defaultValue={""} />
-                                </div>
-                                <div className="flex justify-between items-center">
-                                    <button className="py-4 px-8 text-sm text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded" type="submit">送信する</button>
-                                </div>
-                            </form>
-                        </div>
+                        <form
+                            name="contact"
+                            method="post"
+                            action="/success"
+                            data-netlify="true"
+                            data-netlify-honeypot="bot-field"
+                            onSubmit={handleSubmit}
+                        >
+                            <input type="hidden" name="form-name" value="quotation" />
+                            <p hidden>
+                                <label>
+                                    {" "}
+                                    <input name="bot-field" onChange={handleChange} />
+                                </label>
+                            </p>
+                            <p className="mb-6">
+                                <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                    お名前
+                                    <br />
+                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）田中 太郎" type="text" name="name" onChange={handleChange} />
+                                </label>
+                            </p>
+                            <p className="mb-6">
+                                <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                    会社名/店舗名
+                                    <br />
+                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）SaaSEO合同会社" type="text" name="company" onChange={handleChange} />
+                                </label>
+                            </p>
+                            <p className="mb-6">
+                                <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                    メールアドレス
+                                    <br />
+                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）name@saaseo.com" type="email" name="email" onChange={handleChange} />
+                                </label>
+                            </p>
+                            <p className="mb-6">
+                                <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                    電話番号（任意）
+                                    <br />
+                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）0564−123-4567" type="tel" name="phone" onChange={handleChange} />
+                                </label>
+                            </p>
+                            <p className="mb-6">
+                                <label className="text-blueGray-600 mb-1 ml-1 text-sm">
+                                    詳細内容
+                                    <br />
+                                    <textarea className="w-full h-48 p-4 leading-none bg-blueGray-50 rounded outline-none resize-y placeholder-blueGray-300" placeholder="経緯、目的、事業内容、希望日程、気になることなど" name="message" onChange={handleChange} />
+                                </label>
+                            </p>
+                            <p className="text-center">
+                                <button onClick={() => { setShow(!show) }} className={show ? "hidden transition duration-100" : "py-4 px-8 text-sm text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded transition duration-200"} type="submit">送信する</button>
+                            </p>
+                        </form>
                     </div>
                 </div>
             </section>
         </Layout>
-    )
-}
+    );
+};
 
-export default Contact
+export default Contact;
