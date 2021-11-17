@@ -9,7 +9,7 @@ import Services from '../components/Services'
 import CtaWhite from '../components/CtaWhite'
 import CtaBlue from '../components/CtaBlue'
 
-const firstTimer = () => {
+const FirstTimer = () => {
     return (
         <Layout>
             <GatsbySeo
@@ -509,4 +509,4 @@ const firstTimer = () => {
     )
 }
 
-export default firstTimer
+export default FirstTimer

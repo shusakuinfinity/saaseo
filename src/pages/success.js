@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/Layout'
 
-const success = () => {
+const Success = () => {
     return (
         <Layout>
             <h1>受け取りました！</h1>
@@ -10,4 +10,4 @@ const success = () => {
     )
 }
 
-export default success
+export default Success

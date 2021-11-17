@@ -9,7 +9,7 @@ import CtaBlue from '../components/CtaBlue'
 import CtaBlack from '../components/CtaBlack'
 import Services from '../components/Services'
 
-const seo = () => {
+const Seo = () => {
     return (
         <Layout>
             <GatsbySeo
@@ -364,4 +364,4 @@ const seo = () => {
     )
 }
 
-export default seo
+export default Seo

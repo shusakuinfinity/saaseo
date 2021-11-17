@@ -7,7 +7,7 @@ import CtaWhite from '../components/CtaWhite'
 import CtaBlack from '../components/CtaBlack'
 import Services from '../components/Services'
 
-const saas = () => {
+const Saas = () => {
     return (
         <Layout>
             <GatsbySeo
@@ -150,4 +150,4 @@ const saas = () => {
     )
 }
 
-export default saas
+export default Saas

@@ -10,7 +10,7 @@ import { IoGlobeSharp, IoImageSharp, IoLogoCss3, IoLogoJavascript } from 'react-
 import { Link } from 'gatsby'
 import SvgGatsby from '../assets/images/Gatsby-Monogram.svg'
 
-const blazingFast = () => {
+const BlazingFast = () => {
     return (
         <Layout>
             <GatsbySeo
@@ -190,4 +190,4 @@ const blazingFast = () => {
     )
 }
 
-export default blazingFast
+export default BlazingFast

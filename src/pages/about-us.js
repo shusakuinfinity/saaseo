@@ -5,7 +5,7 @@ import { LocalBusinessJsonLd } from 'gatsby-plugin-next-seo';
 import DotsLeft from '../assets/icons/dots-left.svg'
 import DotsRight from '../assets/icons/dots-right.svg'
 
-const aboutUs = () => {
+const AboutUs = () => {
     return (
         <Layout>
             <GatsbySeo
@@ -119,4 +119,4 @@ const aboutUs = () => {
     )
 }
 
-export default aboutUs
+export default AboutUs

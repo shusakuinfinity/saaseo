@@ -9,7 +9,7 @@ import CtaBlack from '../components/CtaBlack'
 import Services from '../components/Services'
 import { Link } from 'gatsby'
 
-const responsive = () => {
+const Responsive = () => {
     return (
         <Layout>
             <GatsbySeo
@@ -237,4 +237,4 @@ const responsive = () => {
     )
 }
 
-export default responsive
+export default Responsive
