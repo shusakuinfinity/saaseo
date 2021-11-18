@@ -2,13 +2,15 @@ import { GatsbySeo } from 'gatsby-plugin-next-seo'
 import React from 'react'
 import Layout from '../components/Layout'
 import { StaticImage } from 'gatsby-plugin-image'
-import Blob from '../assets/icons/blob-tear.svg'
 import CtaWhite from '../components/CtaWhite'
 import CtaBlack from '../components/CtaBlack'
 import Services from '../components/Services'
 import { IoGlobeSharp, IoImageSharp, IoLogoCss3, IoLogoJavascript } from 'react-icons/io5'
 import { Link } from 'gatsby'
 import SvgGatsby from '../assets/images/Gatsby-Monogram.svg'
+import DotsLeft from '../assets/icons/dots-left.svg'
+import DotsRight from '../assets/icons/dots-right.svg'
+import { FAQJsonLd } from 'gatsby-plugin-next-seo';
 
 const BlazingFast = () => {
     return (
@@ -17,50 +19,36 @@ const BlazingFast = () => {
                 title="サイトスピード改善ならSaaSEO - 爆速サイト制作の方法を公開中"
                 description="「Webサイトのローディング時間が長くて見にくい、SEO的にも弱くてなんとかしたい」という方へ。SaaSEOが使用するWeb制作技術のJamstackを使えばPage Speed Insightでも満点に近い数字を叩き出せる超高速ウェブサイト、爆速サイトの制作が可能です。無料でのWeb制作ご相談も承ります。"
             />
-
-            <section className="py-12 overflow-x-hidden bg-blueGray-800"><div className="container px-4 mx-auto">
-                <div className="flex flex-wrap lg:flex-nowrap md:flex-nowrap">
-                    <div className="w-full lg:w-1/2">
-                        <div className="py-6 lg:pr-32 md:pr-10">
-                            <div className="mb-4 text-center md:text-left">
-                                <h1>
-                                    <span className="text-xs py-1 px-3 text-blue-600 font-semibold bg-blue-50 rounded-xl">爆速サイト制作でサイトスピード改善！</span>
-                                </h1>
-                                <h2 className="text-4xl mt-3 font-bold font-heading text-white">爆速サイトに興味がある方へ</h2>
-                            </div>
-                            <div className="flex items-start py-4">
-                                <div className="w-8 mr-5 text-blue-500">
-                                    <svg className="w-8 h-8 text-yellow-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg></div>
-                                <div>
-                                    <h3 className="mb-2 text-xl font-semibold font-heading text-white">ロード時間が長いサイト4つの問題</h3>
-                                    <p className="text-blueGray-400 leading-loose">なぜサイトスピードは重要なのか？</p>
-                                </div>
-                            </div>
-                            <div className="flex items-start py-4">
-                                <div className="w-8 mr-5 text-blue-500">
-                                    <svg className="w-8 h-8 text-yellow-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z" /></svg></div>
-                                <div>
-                                    <h3 className="mb-2 text-xl font-semibold font-heading text-white">サイトスピードに関わる重要要因</h3>
-                                    <p className="text-blueGray-400 leading-loose">何がサイトを遅くしているのか？</p>
-                                </div>
-                            </div>
-                            <div className="flex items-start py-4">
-                                <div className="w-8 mr-5 text-blue-500">
-                                    <svg className="w-8 h-8 text-yellow-200" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" /></svg></div>
-                                <div>
-                                    <h3 className="mb-2 text-xl font-semibold font-heading text-white">SaaSEOの爆速サイト制作方法</h3>
-                                    <p className="text-blueGray-400 leading-loose">具体的にどうするのか？</p>
-                                </div>
-                            </div>
+            <FAQJsonLd
+                questions={[
+                    { question: 'サイトスピード・ページスピードが遅い原因は何？（ローディングが長いサイトの改善方法）', answer: '手っ取り早いのは画像を圧縮して差し替える。次に速いサーバーもしくはCDNを使う。制作から関われるならJamstackで静的サイトを作ったり、画像やスクリプトの自動圧縮技術を入れたサイトにする。詳しくは本ページにて解説。' },
+                    { question: 'ローディングが遅いとSEOは下がる？不利？悪いこと？', answer: '結果的にSEOは下がる。理由は2つ。1.Googleが公式で発表しているため。2.ユーザー（＝サイト訪問者）の行動量が減る、もしくはページを開くことを諦めるため。詳しくは本ページにて解説。' },
+                    { question: 'ページスピードインサイト（Page Speed Insight)を見てもわからない？', answer: 'スコアが悪い原因は大体以下3つ。1.画像のファイルサイズが大きすぎること。2.サーバーが遅いこと。3.JavascriptやCSSの質が悪いこと。わからなくても、画像の圧縮だけは対応したほうが良い。詳しくは本ページにて解説。' },
+                ]}
+            />
+            <section className="py-32">
+                <div className="container px-4 mx-auto bg-blueGray-50/80">
+                    <div className="relative py-20 px-4 lg:p-20">
+                        <div className="absolute top-0 left-0 -mt-8">
+                            <DotsLeft className="h-16" />
+                        </div>
+                        <div className="max-w-lg mx-auto text-center">
+                            <h2 className="mb-4 text-sm lg:text-base font-bold font-heading text-blueGray-600">爆速サイト制作でサイトスピード改善！</h2>
+                            <h1 className="mb-4 text-2xl lg:text-3xl font-bold font-heading">
+                                <span className="text-blue-600">ローディングの速いサイト制作</span>
+                                <span>, ページスピード改善に興味のある方へ</span>
+                            </h1>
+                            <ul className=" text-blueGray-400">
+                                <li className="mb-2">1. ロード時間が長いサイト4つの問題</li>
+                                <li className="mb-2">2. サイトスピードに関わる重要要因</li>
+                                <li>3. SaaSEOの爆速サイト制作方法</li>
+                            </ul>
+                        </div>
+                        <div className="absolute bottom-0 right-0 -mb-8">
+                            <DotsRight className="h-16" />
                         </div>
                     </div>
-                    <div className="relative w-full lg:w-1/2 my-12 lg:my-0">
-                        <StaticImage className="relative mx-auto rounded-xl w-full z-10" src="../assets/images/fast.jpeg" placeholder="blurred" alt="愛知県で高速・爆速なサイトを作るならSaaSEO" />
-                        <Blob className="absolute top-0 left-0 -ml-12 -mt-12 w-20" />
-                        <Blob className="absolute bottom-0 right-0 w-40 -mr-12 -mb-12" />
-                    </div>
                 </div>
-            </div>
             </section>
 
             <section className="py-20">

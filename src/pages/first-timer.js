@@ -8,6 +8,7 @@ import CtaBlack from '../components/CtaBlack'
 import Services from '../components/Services'
 import CtaWhite from '../components/CtaWhite'
 import CtaBlue from '../components/CtaBlue'
+import { FAQJsonLd } from 'gatsby-plugin-next-seo'
 
 const FirstTimer = () => {
     return (
@@ -15,6 +16,13 @@ const FirstTimer = () => {
             <GatsbySeo
                 title="ホームページ制作会社の選び方【SaaSEO】費用・相場、手順を解説"
                 description="普段は聞き慣れない言葉が飛び交うWeb制作。本ページではできるだけ専門用語を使わずにWeb制作の流れ、制作にかかる費用・相場の考え方などを解説しています。このページを読めば、ホームページ制作会社の見極めもご自身で行えるようになり、目的に合ったWeb制作会社を選択できます。"
+            />
+            <FAQJsonLd
+                questions={[
+                    { question: '正しいホームページ制作会社の選び方は？', answer: '自分たちの目的を達成してくれる会社を選ぶことが正しい選び方。集客が目的なら集客意識の高い会社、美しいサイト作りならデザイン性を押している会社、安く作るならテンプレをうまく使える会社。制作の裏側が分かればより判断がしやすいので、その点を本ページにて解説。' },
+                    { question: 'ホームページ作成・制作に必要な費用、相場は？', answer: 'ホームページなら10万円から800万円が相場。費用は主にコンサル費用・制作費用・運用費用の3つに分かれる。コスト構造が分かれば見極めがしやすくなるので、その点を本ページにて解説。' },
+                    { question: 'ホームページ作成・制作の手順は？', answer: '3分割すると計画→制作→運用となる。それぞれのステップは更に細かく分かれるので、詳細を本ページにて解説。' },
+                ]}
             />
 
             <section className="py-12 overflow-x-hidden bg-blueGray-800">

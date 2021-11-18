@@ -34,7 +34,7 @@ const AboutUs = () => {
                     '../assets/images/logo_SaaSEO_black.svg',
                 ]}
             />
-            <section className="py-20 bg-top bg-no-repeat" style={{ backgroundImage: 'url("../assets/icons/blob.svg")' }}>
+            <section className="py-20">
                 <div className="container px-4 mx-auto bg-blueGray-50/80 -skew-y-12">
                     <div className="relative py-20 px-4 lg:p-20">
                         <div className="absolute top-0 left-0 -mt-8">

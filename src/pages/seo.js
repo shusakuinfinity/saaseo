@@ -8,6 +8,7 @@ import { Link } from 'gatsby'
 import CtaBlue from '../components/CtaBlue'
 import CtaBlack from '../components/CtaBlack'
 import Services from '../components/Services'
+import { FAQJsonLd } from 'gatsby-plugin-next-seo'
 
 const Seo = () => {
     return (
@@ -15,6 +16,12 @@ const Seo = () => {
             <GatsbySeo
                 title="SEO会社のSaaSEO - 対策方法、費用・見積もりの考え方、コンサル内容"
                 description="SEOとはつまり検索への最適化。一般的にはGoogleで上位表示を行うための技術です。当社はSEOに圧倒的な強みを持ち、ウェブサイトを制作する技術からSEOを意識しつつ、できる限り全てのSEO対策をデフォルトで実装し、制作物を納品致します。本ページでは、その内容を全て公開しています。"
+            />
+            <FAQJsonLd
+                questions={[
+                    { question: 'SEOの対策方法とは？', answer: 'Googleの好むサイトを作る。つまり、サイト品質が高く、キーワードの選定と埋め込みが正しく行われていて、ユーザーから愛されていることがわかる行動データが溜めやすいように工夫するのがSEO対策。詳細は本ページにて解説。' },
+                    { question: 'SEO対策、コンサルティングにかかる費用は？', answer: '自分で行う場合は0円から3万円程度（ツール費用）と膨大な時間を要する。コンサルの場合、完璧な対策を施すための調査と対策案の提案にかかる時間が費用となるので30万円は最低でも必要。詳細な内容は本ページにて解説。' },
+                ]}
             />
 
             <section className="py-12 overflow-x-hidden bg-blueGray-800">

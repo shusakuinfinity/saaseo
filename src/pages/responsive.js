@@ -8,6 +8,7 @@ import TailwindImage from '../assets/images/tailwindcss.svg'
 import CtaBlack from '../components/CtaBlack'
 import Services from '../components/Services'
 import { Link } from 'gatsby'
+import { FAQJsonLd } from 'gatsby-plugin-next-seo'
 
 const Responsive = () => {
     return (
@@ -15,6 +16,12 @@ const Responsive = () => {
             <GatsbySeo
                 title="スマホ対応のホームページ制作会社【SaaSEO】方法、費用の考え方公開"
                 description="スマホ対応、レスポンシブ化を完璧に行うには、Web制作の方法から見直す必要があります。しかし、その方法さえ知っていれば工数はより少なく、より確実に行うことができるようになります。本ページではその方法、制作にかかる費用感などを解説しています。"
+            />
+            <FAQJsonLd
+                questions={[
+                    { question: 'スマホ対応、レスポンシブ化をしたウェブサイトの制作方法', answer: 'サイズ別にCSSをかき分けることで制作できる。面倒であればTailwind CSSなど新技術が有効。詳細が気になる場合は本ページにて解説。' },
+                    { question: 'ウェブサイトのスマホ対応、レスポンシブ化にかかる費用・相場', answer: '新規でサイトを立ち上げる場合、ウェブ制作費用に含まれている事が多いので10−800万円が相場。既存のサイトは難しいかもしれないが、CSSを書き足すことで可能な場合があるので新規制作の半分程度で可能。' },
+                ]}
             />
 
             <section className="py-12 overflow-x-hidden bg-blueGray-800">
