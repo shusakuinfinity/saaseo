@@ -29,7 +29,7 @@ const Navbar = () => {
                 <div className={show ? "navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50" : "hidden"}>
                     <div className="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25" onClick={() => { setShow(!show) }}></div>
                     <nav className="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto"><div className="flex items-center mb-8">
-                        <Link className="" to="/">
+                        <Link className="pr-24" to="/">
                             <StaticImage src="../assets/images/logo_SaaSEO_black.svg" alt="岡崎市のWeb制作会社SaaSEO 黒ロゴ" />
                         </Link>
                         <button onClick={() => { setShow(!show) }} className="navbar-close">

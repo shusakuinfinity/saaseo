@@ -16,7 +16,7 @@ const AboutUs = () => {
                 type='ProfessionalService'
                 name="Webサイト制作・SEOコンサルティングのSaaSEO合同会社"
                 description="SEOやマーケティングを強くして、結果につながるサイトを作りたい方はぜひ我々にご相談ください。日本・海外IT領域の最前線で活躍をしているメンバーが、貴社のネット周りを改善致します。無料のオンライン相談、岡崎市周辺であれば対面でのご相談も可能です。"
-                url='https://saaseo.com'
+                url='https://saaseo.dev'
                 telephone='+817085474445'
                 founder='上田 周作'
                 address={{
@@ -81,11 +81,11 @@ const AboutUs = () => {
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                             <h4 className="mb-2 md:mb-4 text-xl font-semibold">メールアドレス</h4>
-                            <p className="text-sm md:text-base leading-loose text-blueGray-500">contact@saaseo.com</p>
+                            <p className="text-sm md:text-base leading-loose text-blueGray-500">contact@saaseo.dev</p>
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                             <h4 className="mb-2 md:mb-4 text-xl font-semibold">URL</h4>
-                            <p className="text-sm md:text-base leading-loose text-blueGray-500">saaseo.com</p>
+                            <p className="text-sm md:text-base leading-loose text-blueGray-500">saaseo.dev</p>
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                             <h4 className="mb-2 md:mb-4 text-xl font-semibold">資本金</h4>

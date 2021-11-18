@@ -88,7 +88,7 @@ const Form = () => {
                                 <label className="text-blueGray-600 mb-1 ml-1 text-sm">
                                     現状のウェブサイトURL（無ければ空欄のままで構いません）
                                     <br />
-                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）saaseo.com, https://saaseo.io" type="text" name="url" onChange={handleChange} />
+                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）saaseo.dev, https://saaseo.dev" type="text" name="url" onChange={handleChange} />
                                 </label>
                             </p>
                             <p className="mb-6">

@@ -19,6 +19,8 @@
     "gatsby-background-image": "^1.5.3",
     "gatsby-plugin-advanced-sitemap": "^2.0.0",
     "gatsby-plugin-breadcrumb": "^12.2.0",
+    "gatsby-plugin-google-gtag": "^4.2.0",
+    "gatsby-plugin-google-tagmanager": "^4.2.0",
     "gatsby-plugin-image": "^2.1.2",
     "gatsby-plugin-next-seo": "^1.9.0",
     "gatsby-plugin-postcss": "^5.1.0",
