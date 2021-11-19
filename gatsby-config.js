@@ -69,17 +69,5 @@ module.exports = {
         }
       }
     },
-    {
-      resolve: `gatsby-plugin-breadcrumb`,
-      options: {
-        defaultCrumb: {
-          location: {
-            pathname: "/",
-          },
-          crumbLabel: "ホーム",
-          crumbSeparator: " / ",
-        },
-      }
-    },
   ],
 }

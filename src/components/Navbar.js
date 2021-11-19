@@ -30,7 +30,7 @@ const Navbar = () => {
                     <div className="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25" onClick={() => { setShow(!show) }}></div>
                     <nav className="relative flex flex-col py-6 px-6 w-full h-full bg-white border-r overflow-y-auto"><div className="flex items-center mb-8">
                         <Link className="pr-24" to="/">
-                            <StaticImage src="../assets/images/logo_SaaSEO_black.svg" alt="岡崎市のWeb制作会社SaaSEO 黒ロゴ" />
+                            <StaticImage src="../assets/images/Logo_SaaSEO_Black.png" alt="岡崎市のWeb制作会社SaaSEO 黒ロゴ" />
                         </Link>
                         <button onClick={() => { setShow(!show) }} className="navbar-close">
                             <svg className="h-6 w-6 text-blueGray-400 cursor-pointer hover:text-blueGray-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>

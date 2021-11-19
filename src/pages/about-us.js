@@ -81,11 +81,11 @@ const AboutUs = () => {
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                             <h4 className="mb-2 md:mb-4 text-xl font-semibold">メールアドレス</h4>
-                            <p className="text-sm md:text-base leading-loose text-blueGray-500">contact@saaseo.dev</p>
+                            <p className="text-sm md:text-base leading-loose text-blue-600"><a href="mailto:contact@saaseo.dev">contact@saaseo.dev</a></p>
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                             <h4 className="mb-2 md:mb-4 text-xl font-semibold">URL</h4>
-                            <p className="text-sm md:text-base leading-loose text-blueGray-500">saaseo.dev</p>
+                            <p className="text-sm md:text-base leading-loose text-blueGray-500">https://saaseo.dev</p>
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                             <h4 className="mb-2 md:mb-4 text-xl font-semibold">資本金</h4>
