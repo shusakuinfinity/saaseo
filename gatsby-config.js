@@ -24,14 +24,25 @@ module.exports = {
         language: 'ja',
         openGraph: {
           type: 'website',
-          locale: 'en_IE',
+          locale: 'ja',
           url: 'https://www.saaseo.dev',
-          site_name: 'SiteName',
-        },
-        twitter: {
-          handle: '@handle',
-          site: '@site',
-          cardType: 'summary_large_image',
+          title: '岡崎市のホームページ制作会社【SaaSEO】集客力が強みのWeb制作会社',
+          description: 'SEOやマーケティングを強くして、結果につながるサイトを作りたい方はぜひ我々にご相談ください。日本・海外IT領域の最前線で活躍をしているメンバーが、貴社のネット周りを改善致します。無料のオンライン相談、岡崎市周辺であれば対面でのご相談も可能です。',
+          site_name: 'SaaSEO公式ウェブサイト',
+          images: [
+            {
+              url: 'https://saaseo.dev/static/7609539758738dcdbf8cbca078f4cbde/e5f7f/work-tv.webp',
+              width: 800,
+              height: 600,
+              alt: '岡崎市のホームページ制作会社【SaaSEO】集客力が強みのWeb制作会社',
+            },
+            {
+              url: 'https://saaseo.dev/static/d880534c54990597b08081a51f9b916d/47255/Logo_SaaSEO_Black.webp',
+              width: 800,
+              height: 600,
+              alt: '岡崎市のホームページ制作会社【SaaSEO】集客力が強みのWeb制作会社',
+            },
+          ],
         },
       },
     },
