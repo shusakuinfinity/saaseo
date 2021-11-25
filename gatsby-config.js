@@ -82,17 +82,17 @@ module.exports = {
         },
       },
     },
-    {
-      resolve: "gatsby-source-strapi",
-      options: {
-        apiURL: "http://localhost:1337",
-        collectionTypes: [
-          "examples",
-          "categories",
-        ],
-        queryLimit: 1000,
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-strapi",
+    //   options: {
+    //     apiURL: "http://localhost:1337",
+    //     collectionTypes: [
+    //       "examples",
+    //       "categories",
+    //     ],
+    //     queryLimit: 1000,
+    //   },
+    // },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
