@@ -24,6 +24,7 @@ const Navbar = () => {
                         <li><Link activeClassName="text-blueGray-400" className="text-sm duration-200 transition text-white hover:text-yellow-200" to="/responsive">スマホ対応</Link></li>
                         <li><Link activeClassName="text-blueGray-400" className="text-sm duration-200 transition text-white hover:text-yellow-200" to="/saas">SaaS導入</Link></li>
                         <li><Link activeClassName="text-blueGray-400" className="text-sm duration-200 transition text-white hover:text-yellow-200" to="/blazing-fast">爆速サイト</Link></li>
+                        <li><Link activeClassName="text-blueGray-400" className="text-sm duration-200 transition text-white hover:text-yellow-200" to="/subsidy">補助金</Link></li>
                     </ul><div className="hidden lg:block"><Link className="mr-2 inline-block px-4 py-3 text-xs font-semibold leading-none rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl bg-yellow-200 hover:bg-yellow-300 text-blueGray-500 hover:text-blueGray-600" to="/quotation">見積り依頼</Link><Link className="inline-block px-4 py-3 text-xs font-semibold leading-none text-blueGray-500 hover:text-blueGray-600 text-center bg-white border border-blueGray-200 hover:border-blueGray-300 rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl" to="/contact">お問い合わせ</Link></div>
                 </nav>
                 <div className={show ? "navbar-menu fixed top-0 left-0 bottom-0 w-5/6 max-w-sm z-50" : "hidden"}>
@@ -43,6 +44,7 @@ const Navbar = () => {
                                 <li className="mb-1"><Link className="block p-4 text-sm text-blueGray-500 hover:bg-yellow-50 hover:text-yellow-600" to="/saas">SaaS導入</Link></li>
                                 <li className="mb-1"><Link className="block p-4 text-sm text-blueGray-500 hover:bg-yellow-50 hover:text-yellow-600" to="/blazing-fast">爆速サイト</Link></li>
                                 <li className="mb-1"><Link className="block p-4 text-sm text-blueGray-500 hover:bg-yellow-50 hover:text-yellow-600" to="/about-us">会社案内</Link></li>
+                                <li className="mb-1"><Link className="block p-4 text-sm text-blueGray-500 hover:bg-yellow-50 hover:text-yellow-600" to="/subsidy">補助金について</Link></li>
                             </ul><div className="mt-4 pt-6 border-t border-blueGray-100"><Link className="block px-4 py-3 mb-3 text-xs text-center font-semibold leading-none bg-blue-600 hover:bg-blue-700 text-white rounded" to="/contact">お問い合わせ</Link><Link className="block px-4 py-3 mb-2 text-xs text-center text-blue-600 hover:text-blue-700 font-semibold leading-none border border-blue-200 hover:border-blue-300 rounded" to="/quotation">見積り依頼</Link></div>
                         </div>
                         <div className="mt-auto">

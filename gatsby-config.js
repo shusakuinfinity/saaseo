@@ -10,30 +10,6 @@ module.exports = {
     siteUrl: 'https://saaseo.dev'
   },
   plugins: [
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          "G-243QVX8YT1", //GA4
-          "UA-213377852-1", // GA
-          "AW-10809603262", // Google Ads
-        ],
-        gtagConfig: {
-          anonymize_ip: true,
-          cookie_expires: 0,
-          send_page_view: true // default appears to be false.
-        },
-        // This object is used for configuration specific to this plugin
-        pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: true,
-          // Setting this parameter is also optional
-          respectDNT: true,
-          // Avoids sending pageview hits from custom paths
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
-        },
-      },
-    },
     `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -83,10 +59,33 @@ module.exports = {
         },
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "UA-213377852-1", // GA
+          "AW-10809603262", // Google Ads
+        ],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+          send_page_view: true // default appears to be false.
+        },
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+          // Setting this parameter is also optional
+          respectDNT: true,
+          // Avoids sending pageview hits from custom paths
+          exclude: ["/preview/**", "/do-not-track/me/too/"],
+        },
+      },
+    },
     // {
     //   resolve: "gatsby-source-strapi",
     //   options: {
-    //     apiURL: "http://localhost:1337",
+    //     apiURL: "https://saaseo-strapi.herokuapp.com/",
     //     collectionTypes: [
     //       "examples",
     //       "categories",
