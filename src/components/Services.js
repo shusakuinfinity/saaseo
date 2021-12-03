@@ -6,11 +6,12 @@ const Services = () => {
     return (
         <section className="pt-16 pb-20 bg-blueGray-50"><div className="container px-4 mx-auto">
             <div className="flex flex-wrap items-center mb-12">
-                <div className="w-full mb-6 lg:mb-0">
-                    <h2 className="text-4xl font-bold font-heading">
-                        <span>SEOに強くてわかりやすい</span>
-                        <span className="text-blue-600">Webサイト制作のために</span>
-                        <span>こんな工夫もしています</span>
+                <div className="w-full">
+                    <span className="inline-block py-1 px-3 text-xs font-semibold bg-blue-100 text-blue-600 rounded-xl">弊社の強み</span>
+                    <h2 className="lg:text-4xl text-3xl font-bold font-heading">
+                        <span>SaaSEOは</span>
+                        <span className="text-blue-600">集客ができて結果に繋がる</span>
+                        <span>ホームページ制作のためにこんな工夫をしています</span>
                     </h2>
                 </div>
             </div>

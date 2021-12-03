@@ -3,7 +3,7 @@ import { Link } from 'gatsby'
 
 const CtaWhite = () => {
     return (
-        <section className="pb-8 -mt-4 bg-white">
+        <section className="pb-16 -mt-4 bg-white">
             <div className="container px-4 mx-auto">
                 <div className="max-w-lg mx-auto text-center">
                     <p className="text-blueGray-400 leading-relaxed mb-4">SaaSEOに相談したい方はこちら</p>

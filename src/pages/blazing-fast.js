@@ -27,7 +27,7 @@ const BlazingFast = () => {
                 ]}
             />
             <section className="py-32">
-                <div className="container px-4 mx-auto bg-blueGray-50/80">
+                <div className="container px-4 mx-auto bg-blueGray-50/80 -skew-y-6">
                     <div className="relative py-20 px-4 lg:p-20">
                         <div className="absolute top-0 left-0 -mt-8">
                             <DotsLeft className="h-16" />

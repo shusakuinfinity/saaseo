@@ -10,6 +10,30 @@ module.exports = {
     siteUrl: 'https://saaseo.dev'
   },
   plugins: [
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-243QVX8YT1", //GA4
+          "UA-213377852-1", // GA
+          "AW-10809603262", // Google Ads
+        ],
+        gtagConfig: {
+          anonymize_ip: true,
+          cookie_expires: 0,
+          send_page_view: true // default appears to be false.
+        },
+        // This object is used for configuration specific to this plugin
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+          // Setting this parameter is also optional
+          respectDNT: true,
+          // Avoids sending pageview hits from custom paths
+          exclude: ["/preview/**", "/do-not-track/me/too/"],
+        },
+      },
+    },
     `gatsby-plugin-advanced-sitemap`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -47,38 +71,15 @@ module.exports = {
               url: 'https://saaseo.dev/static/7609539758738dcdbf8cbca078f4cbde/e5f7f/work-tv.webp',
               width: 800,
               height: 600,
-              alt: '岡崎市のホームページ制作会社【SaaSEO】集客力が強みのWeb制作会社',
+              alt: '岡崎市のホームページ制作会社【SaaSEO】集客力が強みのWeb制作会社 1',
             },
             {
               url: 'https://saaseo.dev/static/d880534c54990597b08081a51f9b916d/47255/Logo_SaaSEO_Black.webp',
               width: 800,
               height: 600,
-              alt: '岡崎市のホームページ制作会社【SaaSEO】集客力が強みのWeb制作会社',
+              alt: '岡崎市のホームページ制作会社【SaaSEO】集客力が強みのWeb制作会社 2',
             },
           ],
-        },
-      },
-    },
-    {
-      resolve: `gatsby-plugin-google-gtag`,
-      options: {
-        trackingIds: [
-          "UA-213377852-1", // GA
-          "AW-10809603262", // Google Ads
-        ],
-        gtagConfig: {
-          anonymize_ip: true,
-          cookie_expires: 0,
-          send_page_view: true // default appears to be false.
-        },
-        // This object is used for configuration specific to this plugin
-        pluginConfig: {
-          // Puts tracking script in the head instead of the body
-          head: true,
-          // Setting this parameter is also optional
-          respectDNT: true,
-          // Avoids sending pageview hits from custom paths
-          exclude: ["/preview/**", "/do-not-track/me/too/"],
         },
       },
     },
