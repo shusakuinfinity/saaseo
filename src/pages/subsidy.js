@@ -38,7 +38,7 @@ const Subsidy = () => {
                                     </h2>
                                     <p className="leading-relaxed text-blueGray-400">小規模事業者持続化補助金、IT導入補助金などを利用すれば最大450万円、多くの場合50万円の割引に値する支援が受けられます。SaaSEOなら美しく、スマホ対応、SEO対策がされたオリジナルサイトを制作します。</p>
                                 </div>
-                                <div className="text-center lg:text-left"><Link className="block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-center font-semibold leading-none rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl bg-yellow-200 hover:bg-yellow-300 text-blueGray-500 hover:text-blueGray-600" to="quotation">見積り依頼</Link><Link className="block sm:inline-block py-4 px-8 text-xs text-blueGray-500 hover:text-blueGray-600 text-center font-semibold leading-none bg-white border border-blueGray-200 hover:border-blueGray-300 rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl" to="contact">無料相談する</Link></div>
+                                <div className="text-center lg:text-left"><Link className="block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-center font-semibold leading-none rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl bg-yellow-200 hover:bg-yellow-300 text-blueGray-500 hover:text-blueGray-600" to="/quotation">見積り依頼</Link><Link className="block sm:inline-block py-4 px-8 text-xs text-blueGray-500 hover:text-blueGray-600 text-center font-semibold leading-none bg-white border border-blueGray-200 hover:border-blueGray-300 rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl" to="/contact">無料相談する</Link></div>
                             </div>
                         </div>
                         <div className="w-full lg:w-1/2 px-3 mb-12 lg:mb-0">
