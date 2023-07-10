@@ -175,8 +175,8 @@ export default function Home() {
           <div className="lg:w-1/2 flex flex-col md:flex-row px-3 mb-12">
             <StaticImage className="h-64 w-64 md:w-192 rounded mx-auto" placeholder="blurred" src="../assets/images/Shusaku.jpeg" alt="SaaSEO founder 1" />
             <div className="pt-6 md:pt-2 md:pl-6">
-              <p className="text-xl">上田 周作（Shusaku Ueda)</p>
-              <p className="my-2 text-blue-600">CEO / Marketer / Jamstack Engineer / Videographer</p>
+              <p className="text-xl">上田 周作（Shusaku Ueda）</p>
+              <p className="my-2 text-blue-600">CEO / Programmer / Marketer</p>
               <p className="leading-loose text-blueGray-400">愛知県岡崎市出身。タイ・バンコクの広告代理店で3年間マーケティングを実践、マレーシア・KLにて4年間、人材企業とIT企業の2社同時経営をする。30歳で帰国後、東京のWeb制作会社に携わりながら、SaaSEOを設立。</p>
             </div>
           </div>
@@ -184,7 +184,7 @@ export default function Home() {
             <StaticImage className="h-64 w-64 md:w-192 rounded mx-auto" placeholder="blurred" src="../assets/images/Ryoya.jpeg" alt="SaaSEO founder 2" />
             <div className="pt-6 md:pt-2 md:pl-6">
               <p className="text-xl">山本 綾哉（Ryoya Yamamoto）</p>
-              <p className="my-2 text-sm text-blue-600">Vice President / SaaS Consultant / Compliance Expert / Music Producer</p>
+              <p className="my-2 text-sm text-blue-600">Co-founder / Creator</p>
               <p className="leading-loose text-blueGray-400">神奈川県横浜市出身。S&amp;P500にリスティングされているITと金融企業を渡り歩き、KL→シンガポール→東京にてビジネスの最前線を経験。省力化・効率化の知識をより多くの現場で役立てるため、SaaSEOを設立。</p>
             </div>
           </div>
