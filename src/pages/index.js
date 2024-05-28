@@ -10,8 +10,8 @@ export default function Home() {
   return (
     <Layout>
       <GatsbySeo
-        title='岡崎市のホームページ制作会社【SaaSEO】集客力が強みのWeb制作会社'
-        description='SEOやマーケティングを強くして、結果につながるサイトを作りたい方はぜひ我々にご相談ください。日本・海外IT領域の最前線で活躍をしているメンバーが、貴社のネット周りを改善致します。無料のオンライン相談、岡崎市周辺であれば対面でのご相談も可能です。'
+        title='ホームページ制作から多言語ソフト開発まで - SaaSEO LLC - 集客力が強みのWeb制作会社'
+        description='SEOやマーケティングを強くして、結果につながるサイトを作りたい方はぜひ我々にご相談ください。日本・海外IT領域の最前線で活躍をしているメンバーが、貴社のネット周りを改善致します。'
       />
 
       <section className="bg-blueGray-800">
@@ -25,7 +25,7 @@ export default function Home() {
                     <span className="text-yellow-200">結果につながる</span>
                     <span className="text-white">ウェブ戦略を実現します</span>
                   </h2>
-                  <p className="leading-relaxed text-blueGray-400">日本・海外IT領域の最前線で活躍をしているメンバーが、貴社のネット戦略改善をお手伝い致します。無料のオンライン相談、岡崎市周辺であれば対面でのご相談も可能です。</p>
+                  <p className="leading-relaxed text-blueGray-400">日本・海外IT領域の最前線で活躍をしているメンバーが、貴社のネット戦略改善をお手伝い致します。</p>
                 </div>
                 <div className="text-center lg:text-left"><Link className="block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-center font-semibold leading-none rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl bg-yellow-200 hover:bg-yellow-300 text-blueGray-500 hover:text-blueGray-600" to="quotation">見積り依頼</Link><Link className="block sm:inline-block py-4 px-8 text-xs text-blueGray-500 hover:text-blueGray-600 text-center font-semibold leading-none bg-white border border-blueGray-200 hover:border-blueGray-300 rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl" to="contact">無料相談する</Link></div>
               </div>
@@ -102,7 +102,7 @@ export default function Home() {
               <span className="text-blue-600">老若男女</span>
               <span>誰でもわかりやすいデザイン設計</span>
             </h2>
-            <p className="text-blueGray-400 leading-loose mb-6">アニメーションが豊富なホームページは、ウェブ上の芸術とも言える格好良さがあります。しかし反面、わかりやすさを損なう危険性をはらんでいます。当社は"classic Never Gets Old"をデザインコンセプトに据えて、わかりやすくて結果に繋がりやすいウェブサイトを制作します。</p>
+            <p className="text-blueGray-400 leading-loose mb-6">基本に忠実に設計するために、具体的な例・ベンチーマークとなるサイト(例えばYoutube。レイアウト、見せ方を真似る等)を持ち、わかりやすくて結果に繋がりやすいウェブサイトを制作します。</p>
             <Link className="inline-block py-4 px-8 text-xs text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl" to="/responsive">更に詳しく</Link>
           </div>
         </div>
@@ -114,10 +114,10 @@ export default function Home() {
           <div className="my-auto mx-auto pt-8 lg:pt-0 max-w-2xl lg:max-w-lg">
             <h2 className="text-3xl md:text-4xl mb-4 font-bold font-heading">
               <span>SEOなど集客に必要な環境を</span>
-              <span className="text-blue-600">百戦錬磨のプロが実装</span>
+              <span className="text-blue-600">実地で結果を出したのプロ</span>
               <span>そして簡易化して運用方法をご提供</span>
             </h2>
-            <p className="text-blueGray-400 leading-loose mb-6">当社は10万人を超える登録者、2,000社以上の企業をインターネット・マーケティングで獲得し、会社を運用した実績を持つプロが設立した会社です。難しい初期設定はウェブサイト制作時に完了し、長期に渡る運用が必要であればお客様に合わせて簡易化した運用資料をお渡しします。また、プロジェクト完了後の月例会議等も設定可能です。</p>
+            <p className="text-blueGray-400 leading-loose mb-6">当社は10万人を超える登録者、2,000社以上の企業をインターネット・マーケティングで獲得し、人材会社を運用した実績を持つ私が設立した会社です。難しい初期設定はウェブサイト制作時に完了し、長期に渡る運用が必要であればお客様に合わせて簡易化した運用資料をお渡しします。また、プロジェクト完了後の月例会議等も設定可能です。</p>
             <Link className="inline-block py-4 px-8 text-xs text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl" to="/seo">更に詳しく</Link>
           </div>
         </div>
@@ -177,7 +177,7 @@ export default function Home() {
             <div className="pt-6 md:pt-2 md:pl-6">
               <p className="text-xl">上田 周作（Shusaku Ueda）</p>
               <p className="my-2 text-blue-600">CEO / Programmer / Marketer</p>
-              <p className="leading-loose text-blueGray-400">愛知県岡崎市出身。タイ・バンコクの広告代理店で3年間マーケティングを実践、マレーシア・KLにて4年間、人材企業とIT企業の2社同時経営をする。30歳で帰国後、東京のWeb制作会社に携わりながら、SaaSEOを設立。</p>
+              <p className="leading-loose text-blueGray-400">愛知県岡崎市出身。タイ・バンコクの制作・広告代理店で3年間企画営業を行う。その後、マレーシア・KLにて4年間、先端IT技術も使った人材経営をする。30歳で帰国後SaaSEOを設立。家具メーカーのマーケティングコンサルティング、福祉企業のホームページ制作等を行いつつ、自社製品の開発をスタート。</p>
             </div>
           </div>
           <div className="w-full text-center px-4 pb-10">
@@ -191,7 +191,7 @@ export default function Home() {
         <div className="max-w-lg mx-auto mb-12 text-center">
           <span className="inline-block py-1 px-3 text-xs font-semibold bg-blue-100 text-blue-600 rounded-xl">Services</span>
           <h2 className="text-3xl md:text-4xl mt-2 mb-4 font-bold font-heading">再現性のある成功体験のために</h2>
-          <p className="text-blueGray-400 leading-loose">ホームページ制作を軸に、目的達成に重要な解決策を取り揃えています</p>
+          <p className="text-blueGray-400 leading-loose">目的達成に重要な解決策を取り揃えています</p>
         </div>
         <div className="flex flex-wrap -mx-3">
           <div className="w-1/2 lg:w-1/4 px-3 mb-20 transform hover:-translate-y-1 duration-200 hover:shadow-xl text-center">
@@ -201,7 +201,7 @@ export default function Home() {
             <StaticImage className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4" src="../assets/icons/analytics.png" alt="岡崎市 SEOコンサルティング" /><h3 className="sm:text-2xl font-bold font-heading">SEO対策</h3>
           </div>
           <div className="w-1/2 lg:w-1/4 px-3 mb-20 transform hover:-translate-y-1 duration-200 hover:shadow-xl text-center">
-            <StaticImage className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4" src="../assets/icons/hourglass.png" alt="愛知県 SaaS導入" /><h3 className="sm:text-2xl font-bold font-heading">SaaS導入</h3>
+            <StaticImage className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4" src="../assets/icons/hourglass.png" alt="愛知県 SaaS導入" /><h3 className="sm:text-2xl font-bold font-heading">SaaS(ウェブで動くアプリ。業務用に最適)導入</h3>
           </div>
           <div className="w-1/2 lg:w-1/4 px-3 mb-20 transform hover:-translate-y-1 duration-200 hover:shadow-xl text-center">
             <StaticImage className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4" src="../assets/icons/calculation.png" alt="愛知県 UI/UXデザイン" /><h3 className="sm:text-2xl font-bold font-heading">UI/UXデザイン</h3>
@@ -213,10 +213,10 @@ export default function Home() {
             <StaticImage className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4" src="../assets/icons/podcast.png" alt="愛知県 Jamstack" /><h3 className="sm:text-2xl font-bold font-heading">超高速サイト(Jamstack)構築</h3>
           </div>
           <div className="w-1/2 lg:w-1/4 px-3 mb-20 transform hover:-translate-y-1 duration-200 hover:shadow-xl text-center">
-            <StaticImage className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4" src="../assets/icons/online-shopping.png" alt="岡崎市 ECサイト制作" /><h3 className="sm:text-2xl font-bold font-heading">ECサイト構築・運用指南</h3>
+            <StaticImage className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4" src="../assets/icons/online-shopping.png" alt="岡崎市 ECサイト制作" /><h3 className="sm:text-2xl font-bold font-heading">ECサイト構築・運用補助</h3>
           </div>
           <div className="w-1/2 lg:w-1/4 px-3 mb-20 transform hover:-translate-y-1 duration-200 hover:shadow-xl text-center">
-            <StaticImage className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4" src="../assets/icons/video-web.png" alt="岡崎市 メディア運用" /><h3 className="sm:text-2xl font-bold font-heading">自社メディア構築・運用指南</h3>
+            <StaticImage className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4" src="../assets/icons/video-web.png" alt="岡崎市 メディア運用" /><h3 className="sm:text-2xl font-bold font-heading">自社メディア構築・運用補助</h3>
           </div>
         </div>
         <div className="w-full text-center pb-10">
