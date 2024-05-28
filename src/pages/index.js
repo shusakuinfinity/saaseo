@@ -169,23 +169,15 @@ export default function Home() {
         <div className="max-w-lg mx-auto mb-12 text-center">
           <span className="inline-block py-1 px-3 text-xs font-semibold bg-blue-100 text-blue-600 rounded-xl">Our Team</span>
           <h2 className="text-3xl md:text-4xl mt-2 mb-4 font-bold font-heading">我々が課題解決に取り組みます</h2>
-          <p className="text-blueGray-400 leading-loose">創業者の2名が現場に立ち、必要に応じて国内外のプロフェッショナルと協業することで予算に応じたベスト・ソリューションを提供します。</p>
+          <p className="text-blueGray-400 leading-loose">必要に応じて国内外のプロフェッショナルと協業することで、予算に応じたベスト・ソリューションを提供します。</p>
         </div>
         <div className="flex flex-wrap -mx-3 -mb-12 text-center md:text-left">
-          <div className="lg:w-1/2 flex flex-col md:flex-row px-3 mb-12">
+          <div className="flex flex-col md:flex-row px-3 mb-12">
             <StaticImage className="h-64 w-64 md:w-192 rounded mx-auto" placeholder="blurred" src="../assets/images/Shusaku.jpeg" alt="SaaSEO founder 1" />
             <div className="pt-6 md:pt-2 md:pl-6">
               <p className="text-xl">上田 周作（Shusaku Ueda）</p>
               <p className="my-2 text-blue-600">CEO / Programmer / Marketer</p>
               <p className="leading-loose text-blueGray-400">愛知県岡崎市出身。タイ・バンコクの広告代理店で3年間マーケティングを実践、マレーシア・KLにて4年間、人材企業とIT企業の2社同時経営をする。30歳で帰国後、東京のWeb制作会社に携わりながら、SaaSEOを設立。</p>
-            </div>
-          </div>
-          <div className="lg:w-1/2 flex flex-col md:flex-row px-3 mb-12">
-            <StaticImage className="h-64 w-64 md:w-192 rounded mx-auto" placeholder="blurred" src="../assets/images/Ryoya.jpeg" alt="SaaSEO founder 2" />
-            <div className="pt-6 md:pt-2 md:pl-6">
-              <p className="text-xl">山本 綾哉（Ryoya Yamamoto）</p>
-              <p className="my-2 text-sm text-blue-600">Co-founder / Creator</p>
-              <p className="leading-loose text-blueGray-400">神奈川県横浜市出身。S&amp;P500にリスティングされているITと金融企業を渡り歩き、KL→シンガポール→東京にてビジネスの最前線を経験。省力化・効率化の知識をより多くの現場で役立てるため、SaaSEOを設立。</p>
             </div>
           </div>
           <div className="w-full text-center px-4 pb-10">
