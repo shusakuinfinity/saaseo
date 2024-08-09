@@ -27,7 +27,7 @@ export default function Home() {
                   </h2>
                   <p className="leading-relaxed text-blueGray-400">日本・海外IT領域の最前線で活躍をしているメンバーが、貴社のネット戦略改善をお手伝い致します。</p>
                 </div>
-                <div className="text-center lg:text-left"><Link className="block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-center font-semibold leading-none rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl bg-yellow-200 hover:bg-yellow-300 text-blueGray-500 hover:text-blueGray-600" to="quotation">見積り依頼</Link><Link className="block sm:inline-block py-4 px-8 text-xs text-blueGray-500 hover:text-blueGray-600 text-center font-semibold leading-none bg-white border border-blueGray-200 hover:border-blueGray-300 rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl" to="contact">無料相談する</Link></div>
+                <div className="text-center lg:text-left"><Link className="block sm:inline-block py-4 px-8 text-xs text-blueGray-500 hover:text-blueGray-600 text-center font-semibold leading-none bg-white border border-blueGray-200 hover:border-blueGray-300 rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl" to="contact">無料相談する</Link></div>
               </div>
             </div>
             <div className="w-full lg:w-1/2 px-3 mb-12 lg:mb-0">
@@ -159,7 +159,6 @@ export default function Home() {
           <p className="text-blueGray-200">ご連絡を頂ければ、相談可能な日程をお送り致します。</p>
           <div className="py-8">
             <Link className="block sm:inline-block py-4 px-8 mb-4 sm:mb-0 sm:mr-3 text-xs text-center font-semibold leading-none rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl bg-yellow-200 hover:bg-yellow-300 text-blueGray-500 hover:text-blueGray-600" to="/contact">お問い合わせする</Link>
-            <Link className="block sm:inline-block py-4 px-8 text-xs text-blueGray-500 hover:text-blueGray-600 text-center font-semibold leading-none bg-white border border-blueGray-200 hover:border-blueGray-300 rounded transform hover:-translate-y-1 duration-200 hover:shadow-xl" to="/quotation">見積り依頼をする</Link>
           </div>
         </div>
       </div>

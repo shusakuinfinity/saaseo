@@ -23,7 +23,6 @@ const Footer = () => {
                 <ul className="py-2 flex lg:flex-row items-center justify-center space-x-12 text-white">
                     <li><Link activeClassName="text-blueGray-400" className="font-bold font-heading hover:text-yellow-200 duration-200 transition text-sm md:text-lg" to="/about-us">会社案内</Link></li>
                     <li><Link activeClassName="text-blueGray-400" className="font-bold font-heading hover:text-yellow-200 duration-200 transition text-sm md:text-lg" to="/contact">お問い合わせ</Link></li>
-                    <li><Link activeClassName="text-blueGray-400" className="font-bold font-heading hover:text-yellow-200 duration-200 transition text-sm md:text-lg" to="/quotation">見積り依頼</Link></li>
                 </ul>
                 <ul className="py-2 flex lg:flex-row items-center justify-center space-x-12 text-white">
                     <li><Link activeClassName="text-blueGray-400" className="font-bold font-heading hover:text-yellow-200 duration-200 transition text-sm md:text-lg" to="/compliance">特定商取引法に基づく表記</Link></li>
