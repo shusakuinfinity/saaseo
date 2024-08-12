@@ -45,12 +45,12 @@ const Contact = () => {
                             name="contact"
                             method="post"
                             action="/success"
-                            data-netlify="true"
                             data-netlify-honeypot="bot-field"
                             data-netlify-recaptcha="true"
+                            data-netlify="true"
                             onSubmit={handleSubmit}
                         >
-                            <input type="hidden" name="form-name" value="quotation" />
+                            <input type="hidden" name="form-name" value="contact" />
                             <p hidden>
                                 <label>
                                     {" "}
