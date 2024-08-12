@@ -30,8 +30,6 @@ const Contact = () => {
             .catch((error) => alert(error));
     };
 
-    const [show, setShow] = useState(false)
-
     return (
         <Layout>
             <section className="py-20">
@@ -46,11 +44,10 @@ const Contact = () => {
                             method="post"
                             action="/success"
                             data-netlify-honeypot="bot-field"
-                            data-netlify-recaptcha="true"
                             data-netlify="true"
                             onSubmit={handleSubmit}
                         >
-                            <input type="hidden" name="form-name" value="contact" />
+                            <input type="hidden" name="contact" value="contact" />
                             <p hidden>
                                 <label>
                                     {" "}
@@ -61,21 +58,21 @@ const Contact = () => {
                                 <label className="text-blueGray-600 mb-1 ml-1 text-sm">
                                     お名前
                                     <br />
-                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）田中 太郎" type="text" name="name" onChange={handleChange} />
+                                    <input required className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）田中 太郎" type="text" name="name" onChange={handleChange} />
                                 </label>
                             </p>
                             <p className="mb-6">
                                 <label className="text-blueGray-600 mb-1 ml-1 text-sm">
                                     会社名/店舗名
                                     <br />
-                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）SaaSEO合同会社" type="text" name="company" onChange={handleChange} />
+                                    <input required className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）SaaSEO合同会社" type="text" name="company" onChange={handleChange} />
                                 </label>
                             </p>
                             <p className="mb-6">
                                 <label className="text-blueGray-600 mb-1 ml-1 text-sm">
                                     メールアドレス
                                     <br />
-                                    <input className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）name@saaseo.com" type="email" name="email" onChange={handleChange} />
+                                    <input required className="w-full p-4 font-semibold leading-none bg-blueGray-50 rounded outline-none placeholder-blueGray-300" placeholder="例）name@saaseo.com" type="email" name="email" onChange={handleChange} />
                                 </label>
                             </p>
                             <p className="mb-6">
@@ -89,12 +86,11 @@ const Contact = () => {
                                 <label className="text-blueGray-600 mb-1 ml-1 text-sm">
                                     詳細内容
                                     <br />
-                                    <textarea className="w-full h-48 p-4 leading-none bg-blueGray-50 rounded outline-none resize-y placeholder-blueGray-300" placeholder="経緯、目的、事業内容、希望日程、気になることなど" name="message" onChange={handleChange} />
+                                    <textarea required className="w-full h-48 p-4 leading-none bg-blueGray-50 rounded outline-none resize-y placeholder-blueGray-300" placeholder="経緯、目的、事業内容、希望日程、気になることなど" name="message" onChange={handleChange} />
                                 </label>
                             </p>
-                            <div data-netlify-recaptcha="true"></div>
                             <p className="text-center">
-                                <button onClick={() => { setShow(!show) }} className={show ? "hidden transition duration-100" : "py-4 px-8 text-sm text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded transition duration-200"} type="submit">送信する</button>
+                                <button className={"py-4 px-8 text-sm text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded transition duration-200"} type="submit">送信する</button>
                             </p>
                         </form>
                     </div>
