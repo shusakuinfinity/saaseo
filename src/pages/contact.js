@@ -47,6 +47,7 @@ const Contact = () => {
                             action="/success"
                             data-netlify="true"
                             data-netlify-honeypot="bot-field"
+                            data-netlify-recaptcha="true"
                             onSubmit={handleSubmit}
                         >
                             <input type="hidden" name="form-name" value="quotation" />
@@ -91,6 +92,7 @@ const Contact = () => {
                                     <textarea className="w-full h-48 p-4 leading-none bg-blueGray-50 rounded outline-none resize-y placeholder-blueGray-300" placeholder="経緯、目的、事業内容、希望日程、気になることなど" name="message" onChange={handleChange} />
                                 </label>
                             </p>
+                            <div data-netlify-recaptcha="true"></div>
                             <p className="text-center">
                                 <button onClick={() => { setShow(!show) }} className={show ? "hidden transition duration-100" : "py-4 px-8 text-sm text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded transition duration-200"} type="submit">送信する</button>
                             </p>
