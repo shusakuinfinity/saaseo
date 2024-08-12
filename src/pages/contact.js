@@ -1,6 +1,14 @@
 import React, { useState } from "react";
 import { navigate } from "gatsby-link";
 import Layout from "../components/Layout";
+import Recaptcha from "react-google-recaptcha";
+
+const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY
+if (typeof RECAPTCHA_KEY === "undefined") {
+    throw new Error(`
+  reCAPTCHAキーが登録されていません
+  `)
+}
 
 const encode = (data) => {
     return Object.keys(data)
@@ -10,25 +18,33 @@ const encode = (data) => {
 
 const Contact = () => {
     const [state, setState] = useState({});
+    const recaptchaRef = React.createRef()
+    const [recaptchaStatus, setRecaptchaStatus] = React.useState(false)
 
     const handleChange = (e) => {
         setState({ ...state, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const form = e.target;
+    const handleSubmit = e => {
+        e.preventDefault()
+        const form = e.target
+        const recaptchaValue = recaptchaRef.current.getValue()
         fetch("/", {
             method: "POST",
             headers: { "Content-Type": "application/x-www-form-urlencoded" },
             body: encode({
                 "form-name": form.getAttribute("name"),
+                "g-recaptcha-response": recaptchaValue,
                 ...state,
             }),
         })
             .then(() => navigate(form.getAttribute("action")))
-            .catch((error) => alert(error));
-    };
+            .catch(error => alert(error))
+    }
+
+    const recaptchaSuccess = () => {
+        setRecaptchaStatus(true)
+    }
 
     return (
         <Layout>
@@ -44,10 +60,11 @@ const Contact = () => {
                             method="post"
                             action="/success"
                             data-netlify-honeypot="bot-field"
+                            data-netlify-recaptcha="true"
                             data-netlify="true"
                             onSubmit={handleSubmit}
                         >
-                            <input type="hidden" name="contact" value="contact" />
+                            <input type="hidden" name="form-name" value="contact" />
                             <p hidden>
                                 <label>
                                     {" "}
@@ -89,8 +106,20 @@ const Contact = () => {
                                     <textarea required className="w-full h-48 p-4 leading-none bg-blueGray-50 rounded outline-none resize-y placeholder-blueGray-300" placeholder="経緯、目的、事業内容、希望日程、気になることなど" name="message" onChange={handleChange} />
                                 </label>
                             </p>
+                            <div className="grid w-full justify-center mb-4">
+                                <Recaptcha
+                                    ref={recaptchaRef}
+                                    sitekey={RECAPTCHA_KEY}
+                                    onChange={recaptchaSuccess}
+                                />
+                            </div>
                             <p className="text-center">
-                                <button className={"py-4 px-8 text-sm text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded transition duration-200"} type="submit">送信する</button>
+                                <button
+                                    disabled={!recaptchaStatus}
+                                    className={"cursor-pointer py-4 px-8 text-sm text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded transition duration-200"}
+                                    type="submit">
+                                    送信する
+                                </button>
                             </p>
                         </form>
                     </div>
