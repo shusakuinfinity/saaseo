@@ -17,15 +17,31 @@ const Contact = () => {
         setState({ ...state, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Check if the reCAPTCHA token is present
         if (!recaptchaToken) {
-            alert("Please complete the reCAPTCHA.");
+            alert("reCAPTCHAをチェックした後、送信してください。");
             return;
         }
 
+        // Verify reCAPTCHA token with the Netlify function
+        const recaptchaResponse = await fetch('/.netlify/functions/recaptcha-verify', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ token: recaptchaToken }),
+        });
+
+        const recaptchaData = await recaptchaResponse.json();
+
+        if (!recaptchaData.success) {
+            alert("reCAPTCHAの承認に失敗しました。もう一度お試しください。");
+            return;
+        }
+
+        // If reCAPTCHA is verified, proceed with form submission
         const form = e.target;
         fetch("/", {
             method: "POST",
@@ -33,12 +49,12 @@ const Contact = () => {
             body: encode({
                 "form-name": form.getAttribute("name"),
                 ...state,
-                "g-recaptcha-response": recaptchaToken,  // Include the reCAPTCHA token in the form data
             }),
         })
             .then(() => navigate(form.getAttribute("action")))
             .catch((error) => alert(error));
     };
+
 
     return (
         <Layout>
@@ -102,7 +118,8 @@ const Contact = () => {
                             {/* Add the reCAPTCHA component */}
                             <p className="mb-6 mx-auto grid justify-center">
                                 <ReCAPTCHA
-                                    sitekey="6LfA6SIqAAAAAELs475BfTrJmG_LM4gOjqmHNSoZ"  // Replace with your actual site key
+                                    // Replace with your actual site key
+                                    sitekey={'6LfA6SIqAAAAAELs475BfTrJmG_LM4gOjqmHNSoZ'}
                                     onChange={(token) => setRecaptchaToken(token)}  // Update the token state when the CAPTCHA is completed
                                 />
                             </p>
