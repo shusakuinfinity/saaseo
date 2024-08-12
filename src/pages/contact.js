@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { navigate } from "gatsby-link";
 import Layout from "../components/Layout";
-import ReCAPTCHA from "react-google-recaptcha";  // Import the ReCAPTCHA component
 
 const encode = (data) => {
     return Object.keys(data)
@@ -11,7 +10,6 @@ const encode = (data) => {
 
 const Contact = () => {
     const [state, setState] = useState({});
-    const [recaptchaToken, setRecaptchaToken] = useState(null);  // State to store the reCAPTCHA token
 
     const handleChange = (e) => {
         setState({ ...state, [e.target.name]: e.target.value });
@@ -19,13 +17,6 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-
-        // Check if the reCAPTCHA token is present
-        if (!recaptchaToken) {
-            alert("reCAPTCHAをチェックした後、送信してください。");
-            return;
-        }
-
         const form = e.target;
         fetch("/", {
             method: "POST",
@@ -33,12 +24,13 @@ const Contact = () => {
             body: encode({
                 "form-name": form.getAttribute("name"),
                 ...state,
-                "g-recaptcha-response": recaptchaToken,  // Include the reCAPTCHA token in the form data
             }),
         })
             .then(() => navigate(form.getAttribute("action")))
             .catch((error) => alert(error));
     };
+
+    const [show, setShow] = useState(false)
 
     return (
         <Layout>
@@ -99,16 +91,8 @@ const Contact = () => {
                                     <textarea className="w-full h-48 p-4 leading-none bg-blueGray-50 rounded outline-none resize-y placeholder-blueGray-300" placeholder="経緯、目的、事業内容、希望日程、気になることなど" name="message" onChange={handleChange} />
                                 </label>
                             </p>
-                            {/* Add the reCAPTCHA component */}
-                            <p className="mb-6 mx-auto grid justify-center">
-                                <ReCAPTCHA
-                                    // Replace with your actual site key
-                                    sitekey="6LfA6SIqAAAAAELs475BfTrJmG_LM4gOjqmHNSoZ"
-                                    onChange={(token) => setRecaptchaToken(token)}  // Update the token state when the CAPTCHA is completed
-                                />
-                            </p>
                             <p className="text-center">
-                                <button className={"py-4 px-8 text-sm text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded transition duration-200"} type="submit">送信する</button>
+                                <button onClick={() => { setShow(!show) }} className={show ? "hidden transition duration-100" : "py-4 px-8 text-sm text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded transition duration-200"} type="submit">送信する</button>
                             </p>
                         </form>
                     </div>
