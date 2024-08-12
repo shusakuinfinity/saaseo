@@ -19,7 +19,6 @@ if (typeof RECAPTCHA_KEY === "undefined") {
 const Contact = () => {
     const [state, setState] = useState({});
     const recaptchaRef = React.createRef()
-    const [recaptchaStatus, setRecaptchaStatus] = React.useState(false)
 
     const handleChange = (e) => {
         setState({ ...state, [e.target.name]: e.target.value });
@@ -27,6 +26,13 @@ const Contact = () => {
 
     const handleSubmit = e => {
         e.preventDefault()
+
+        // if recaptcha is not checked, alert the user
+        if (recaptchaRef.current.getValue() === "") {
+            alert("reCAPTCHAをチェックしてください")
+            return
+        }
+
         const form = e.target
         const recaptchaValue = recaptchaRef.current.getValue()
         fetch("/", {
@@ -40,10 +46,6 @@ const Contact = () => {
         })
             .then(() => navigate(form.getAttribute("action")))
             .catch(error => alert(error))
-    }
-
-    const recaptchaSuccess = () => {
-        setRecaptchaStatus(true)
     }
 
     return (
@@ -110,12 +112,10 @@ const Contact = () => {
                                 <Recaptcha
                                     ref={recaptchaRef}
                                     sitekey={RECAPTCHA_KEY}
-                                    onChange={recaptchaSuccess}
                                 />
                             </div>
                             <p className="text-center">
                                 <button
-                                    disabled={!recaptchaStatus}
                                     className={"py-4 px-8 text-sm text-white font-semibold leading-none bg-blue-600 hover:bg-blue-700 rounded transition duration-200"}
                                     type="submit">
                                     送信する
