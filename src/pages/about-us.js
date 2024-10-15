@@ -89,20 +89,19 @@ const AboutUs = () => {
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                             <h4 className="mb-2 md:mb-4 text-xl font-semibold">資本金</h4>
-                            <p className="text-sm md:text-base leading-loose text-blueGray-500">100,000円</p>
+                            <p className="text-sm md:text-base leading-loose text-blueGray-500">300,000円</p>
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                             <h4 className="mb-2 md:mb-4 text-xl font-semibold">設立</h4>
-                            <p className="text-sm md:text-base leading-loose text-blueGray-500">2021年11月11日</p>
+                            <p className="text-sm md:text-base leading-loose text-blueGray-500">2021年11月22日</p>
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                             <h4 className="mb-2 md:mb-4 text-xl font-semibold">役員</h4>
                             <p className="text-sm md:text-base leading-loose text-blueGray-500">代表社員 上田周作</p>
-                            <p className="text-sm md:text-base leading-loose text-blueGray-500">業務執行社員 山本綾哉</p>
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                             <h4 className="mb-2 md:mb-4 text-xl font-semibold">従業員数</h4>
-                            <p className="text-sm md:text-base leading-loose text-blueGray-500">2名（外部4名）</p>
+                            <p className="text-sm md:text-base leading-loose text-blueGray-500">1名</p>
                         </div>
                         <div className="w-full md:w-1/2 lg:w-1/3 px-4 mb-8">
                             <h4 className="mb-2 md:mb-4 text-xl font-semibold">事業内容</h4>
