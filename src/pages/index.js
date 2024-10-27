@@ -20,7 +20,7 @@ export default function Home() {
             <div className="w-full lg:w-1/2 px-3">
               <div className="py-12">
                 <div className="max-w-lg lg:max-w-md mx-auto lg:mx-0 mb-8 text-center lg:text-left">
-                  <h1 className="text-white text-xs md:text-sm">岡崎市のホームページ制作会社/Webサイト制作会社 - SaaSEO</h1>
+                  <h1 className="text-white text-xs md:text-sm">SEOに強いウェブサイト開発会社</h1>
                   <h2 className="text-3xl md:text-4xl mb-4 font-bold font-heading">
                     <span className="text-yellow-200">結果につながる</span>
                     <span className="text-white">ウェブ戦略を実現します</span>
